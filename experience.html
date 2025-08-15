@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience - Masina Thando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* 🔁 Marquee Text */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      color: #ffcc00;
+      font-size: 20px;
+      animation: marquee 15s linear infinite;
+    }
+    
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+
+    .container {
+      position: relative;
+      display: block;
+    }
+
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* 🔲 Transparent Overlay at Bottom Half */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* 🔁 Fade In Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 🎠 Carousel Styles */
+    .carousel-container {
+      width: 100%;
+      max-width: 800px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .carousel-item h3 {
+      margin: 10px 0;
+      color: #fff;
+    }
+
+    .carousel-item p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 204, 0, 0.7);
+      border: none;
+      color: #000;
+      font-size: 24px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #ffcc00;
+    }
+
+    .nav-btn.prev {
+      left: 10px;
+    }
+
+    .nav-btn.next {
+      right: 10px;
+    }
+
+    /* 📱 Social Media Icons */
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-icons a {
+      color: #ffcc00;
+      font-size: 24px;
+      text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* 🏀 Bounce Animation */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .overlay {
+        height: 60%;
+      }
+      .carousel-item p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔁 Marquee -->
+  <div class="marquee-container">
+    <div class="marquee-text">
+      <a href="https://github.com/yourusername" target="_blank" style="color: #ffcc00; text-decoration: none; margin-right: 20px;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      &nbsp;&nbsp;&nbsp;@Thando70&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/yourusername" target="_blank" style="color: #ffcc00; text-decoration: none; margin-right: 20px;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      &nbsp;&nbsp;&nbsp;@Thando70&nbsp;&nbsp;&nbsp;
+    </div>
+   </div>
+
+
+  <!-- 🖼️ Background Photo -->
+  <div class="container">
+    <img src="yourphoto.jpg" alt="Masina Thando in futuristic city" class="photo">
+
+    <!-- 🧊 Transparent Overlay at Bottom -->
+    <div class="overlay">
+      <h1>Experience</h1>
+
+      <!-- 🎠 Carousel -->
+      <div class="carousel-container">
+        <div class="carousel-inner" id="carouselInner">
+          <!-- Item 1-->
+          <div class="carousel-item">
+          <h3>Education</h3>
+          <p>University of Zululand<br>2027 – Year of Complition</p>
+          <p>An active innovator using Tech Solutions, interested in, Data Science, Mathematics and Leadership.</p>
+          </div>
+          
+          <!-- Item 2 -->
+          <div class="carousel-item">
+            <h3>Areas of Expertise</h3>
+            <p>Full Stack Development<br>2024 – Start Year</p>
+            <p>App Strategies, Git and Collaboration, and Data Management and Analysis</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="carousel-item">
+            <h3>Achievements</h3>
+            <p>Project Portfolio<br>2023 – Start Year</p>
+            <p>Entry-level certified in Python and Javascript, Certified with 32 credits in Full Stack Development.</p>
+          </div>
+        </div>
+
+        <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <!-- 🔗 Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com/yourfacebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎯 Carousel Script -->
+  <script>
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    }, 5000);  
+
+    const carouselInner = document.getElementById('carouselInner');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    const totalItems = items.length;
+
+    function updateCarousel() {
+      const offset = -currentIndex * 100;
+      carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    });
+  </script>
+</body>
+</html>

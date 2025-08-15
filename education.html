@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      line-height: 1.6;
+      animation: fadeIn 1.2s ease;
+      overflow-x: hidden;
+    }
+
+    /* 🔧 Photo styling with shiny overlay effect */
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+
+    /* 🖼️ Carousel Styles */
+    .carousel-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .carousel-item p {
+      margin: 10px 0;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 204, 0, 0.7);
+      border: none;
+      color: #000;
+      font-size: 28px;
+      padding: 15px 20px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .nav-btn:hover {
+      background-color: #ffcc00;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* 🔗 Social Media Icons with bounce */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .social-icons a {
+      color: #ffcc00;
+      font-size: 32px;
+      animation: bounce 2s infinite;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-10px);}
+      60% {transform: translateY(-5px);}
+    }
+
+    /* 🎞️ Marquee */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      border-top: 1px solid #ffcc00;
+      border-bottom: 1px solid #ffcc00;
+      margin-top: 20px;
+      background: rgba(255, 204, 0, 0.1);
+    }
+
+    .marquee-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 🌐 Responsive Styles */
+    @media (max-width: 768px) {
+      .overlay {
+        height: 60%;
+        padding: 20px 10px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .marquee-text {
+        font-size: 1rem;
+      }
+
+      .nav-btn {
+        font-size: 22px;
+        padding: 12px;
+      }
+    }
+
+    html {
+      font-size: clamp(14px, 1.8vw, 18px);
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- 🖼️ Image with overlay text -->
+  <div class="container">
+    <img src="yourphoto.png" alt="Masina Thando in futuristic city" class="photo">
+    <div class="overlay">
+      <h1>Experience</h1>
+    </div>
+  </div>
+
+  <!-- 🎞️ Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-inner" id="carouselInner">
+      <div class="carousel-item">
+        <h3>Frontend Developer</h3>
+        <p>Futurix Tech Agency<br>2023 – Present</p>
+        <p>Built interactive websites using HTML, CSS, JavaScript & Tailwind.</p>
+      </div>
+
+      <div class="carousel-item">
+        <h3>UI/UX Designer</h3>
+        <p>Innovate
+
+
